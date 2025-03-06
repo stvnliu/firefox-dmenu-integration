@@ -1,5 +1,5 @@
 [package]
-name = "firefox-menu-integration"
+name = "firefox-dmenu-integration"
 version = "0.1.0"
 edition = "2021"
 
