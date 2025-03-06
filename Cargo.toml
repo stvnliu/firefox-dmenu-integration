@@ -1,0 +1,9 @@
+[package]
+name = "firefox-menu-integration"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.31", features = ["derive", "string"] }
+rusqlite = "0.34.0"
+url = "2.5.4"
