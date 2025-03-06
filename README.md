@@ -19,9 +19,9 @@ Options:
 ```
 
 ### Finding your Firefox profile location
->
 > In the future, fuzzily attempting to discover firefox profile directories can
-be implemented. See To-dos.
+be implemented. See To-dos.  
+
 Your Firefox profile is most like located in
 `~/.mozilla/firefox/<string of numbers>.default`.
 To verify that this is the correct folder, confirm that `places.sqlite` exists
