@@ -81,17 +81,17 @@ fn main() -> Result<()> {
             }
         }
     }
-    for h in &hosts {
+    /*for h in &hosts {
         println!("{}", h);
-    }
+    }*/
     let tmp_urls_path = PathBuf::from("/tmp/firefox-dmenu-urls.tmp");
     let _ = fs::remove_file(&path);
     let dmenu_opts = hosts.into_iter().collect::<Vec<String>>().join("\n");
-    println!(
+    /*println!(
         "cat {} | {}",
         tmp_urls_path.to_str().unwrap(),
         args.dmenu.to_str().unwrap()
-    );
+    );*/
     let _ = fs::write(&tmp_urls_path, &dmenu_opts);
     let source_command = Command::new("cat")
         .arg(&tmp_urls_path)
@@ -116,8 +116,8 @@ fn main() -> Result<()> {
         .wait_with_output()
         .expect("[dmenu] Expected dmenu to successfully execute.");
     let dmenu_sel = String::from_utf8_lossy(&dmenu_out.stdout);
-    println!("Captured selection: {}", dmenu_sel);
-    println!("{}", dmenu_sel);
+    /*println!("Captured selection: {}", dmenu_sel);
+    println!("{}", dmenu_sel);*/
     if dmenu_sel.to_string() == String::from("") {
         println!("dmenu did not produce any output.");
         return Ok(());
